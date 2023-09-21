@@ -1,5 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  width: 50%;
+  height: 50%;
+}
+#container #date {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.25em;
+}
+#container #joke {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
