@@ -1,5 +1,8 @@
 var body = document.body; 
 var date = document.getElementById('date');
+var jokeArea = document.getElementById('joke');
+var loadJoke;
+
 
 body.style.background = "hsla(" + Math.floor(Math.random() * (360)) + ", 75%, 58%, 1)";
 
@@ -33,10 +36,37 @@ function refreshAt(hours, minutes, seconds) {
     then.setSeconds(seconds);
 
     var timeout = (then.getTime() - now.getTime());
-    setTimeout(function() { window.location.reload(true); }, timeout);
+    setTimeout(function() { 
+        window.location.reload(true);
+        loadJoke = "test"; 
+     }, timeout);
+
+     
+  
+
 }
 
-refreshAt(00,00,0);
+refreshAt(21, 03,30);
 
 
 
+
+
+async function fetchJoke() {
+    const response = await fetch("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+  
+// TODO: Load a quote
+// TODO: store quote  // TODO: Change quote at a certain time 
+
+    // return response.json();
+  
+    // loadJoke = response.json();
+//     const {joke} = await response.json();
+
+    // console.log(joke);
+  }
+  
