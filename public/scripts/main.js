@@ -22,34 +22,6 @@ let currentDate = `${monthName}. ${day} ${year}`;
 date.innerHTML = currentDate;
 
 
-function refreshAt(hours, minutes, seconds) {
-    var now = new Date();
-    var then = new Date();
-
-    if(now.getHours() > hours ||
-       (now.getHours() == hours && now.getMinutes() > minutes) ||
-        now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
-        then.setDate(now.getDate() + 1);
-    }
-    then.setHours(hours);
-    then.setMinutes(minutes);
-    then.setSeconds(seconds);
-
-    var timeout = (then.getTime() - now.getTime());
-    setTimeout(function() { 
-        window.location.reload(true);
-        loadJoke = "test"; 
-     }, timeout);
-
-     
-  
-
-}
-
-refreshAt(21, 03,30);
-
-
-
 
 
 async function fetchJoke() {
@@ -62,11 +34,10 @@ async function fetchJoke() {
 // TODO: Load a quote
 // TODO: store quote  // TODO: Change quote at a certain time 
 
-    // return response.json();
   
-    // loadJoke = response.json();
-//     const {joke} = await response.json();
-
-    // console.log(joke);
+    const {joke} = await response.json();
+    jokeArea.innerHTML = joke; 
   }
   
+
+   fetchJoke();
