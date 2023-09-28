@@ -14,7 +14,7 @@ body {
 
 #container {
   width: 50%;
-  height: 50%;
+  height: 35%;
 }
 #container #date {
   text-align: center;
@@ -27,4 +27,13 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  #date {
+    font-size: 2.5rem !important;
+  }
+  #joke {
+    font-size: 1.25rem !important;
+  }
 }/*# sourceMappingURL=main.css.map */

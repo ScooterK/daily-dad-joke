@@ -19,7 +19,7 @@ body{
 
 #container{
     width: 50%; 
-    height: 50%; 
+    height: 35%; 
 
     #date{
         text-align: center;
@@ -35,4 +35,10 @@ body{
         font-weight: 500; 
         
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #date{ font-size: 2.5rem !important;}
+    #joke{ font-size: 1.25rem !important;}
 }
